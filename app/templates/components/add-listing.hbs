@@ -1,6 +1,6 @@
 {{#if true}}
   <form>
-
+    <label for="category">Choose a listing category:</label>
     <select onchange={{action (mut selectedCategory) value="target.value"}}>
       <option value="category" disabled>Choose a category</option>
       {{#each model.categories as |category|}}
@@ -15,6 +15,7 @@
 {{#each model.categories as |category|}}
   {{#if (eq category.id selectedCategory)}}
   <form>
+    <label for="subcategory">Choose a listing subcategory:</label>
     <select onchange={{action (mut selectedSubcategory) value="target.value"}}>
       <option value="subcategory" disabled>Choose a subcategory</option>
 
@@ -35,23 +36,23 @@
       <div class="row">
         <form>
           <label for="title">Title</label>
-          {{input value=title id='title'}}
+          {{input class="form-control" value=title id='title'}}
 
           <label for="name">Name</label>
-          {{input value=name id='name'}}
+          {{input class="form-control"value=name id='name'}}
 
           <label for="email">Email</label>
-          {{input value=email id='email'}}
+          {{input class="form-control" value=email id='email'}}
 
           <label for="location">Location</label>
-          {{input value=location id='location'}}
+          {{input class="form-control" value=location id='location'}}
 
           <label for="details">Details</label>
-          {{textarea value=details id='details'}}
+          {{textarea class="form-control" value=details id='details'}}
 
           <label for="image">Image</label>
-          {{input value=image id='image'}}
-
+          {{input class="form-control" value=image id='image'}}
+          <br>
           <button class="btn btn-default" {{action 'saveListing' subcategory}} >Submit</button>
         </form>
       </div>
