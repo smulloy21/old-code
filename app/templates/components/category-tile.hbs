@@ -1,4 +1,5 @@
-
-<li>{{category.name}}</li>
-{{#link-to 'category' category.id}}<span class={{category.image}}></span>{{/link-to}}
-{{yield}}
+{{#link-to 'category' category.id}}
+<div class="category-img">
+    <span class={{category.image}} ></span>
+</div>
+{{/link-to}}

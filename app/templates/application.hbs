@@ -1,9 +1,18 @@
-<header>
-  <h1>Welcome to Craigslist Clone</h1>
-  <nav>
-    {{#link-to 'index'}}<h2>Home</h2>{{/link-to}}
-    {{#link-to 'newListing'}}<h2>New Listing</h2>{{/link-to}}
+<div class="container-fluid">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-brand">Craigslist</div>
+      <ul class="nav navbar-nav">
+        <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+      </ul>
+      <div class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
+          <li>{{#link-to 'newListing'}}Admin{{/link-to}}</li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
-
-{{outlet}}
+  <div class="container">
+    {{outlet}}
+  </div>
+</div>

@@ -1,18 +1,37 @@
 {
   "categories": [
     { "name" : "housing",
-      "subcategories": [],
+      "subcategories": {},
       "image": "glyphicon glyphicon-home"
     },
 
     { "name" : "for sale",
-      "subcategories": [],
+      "subcategories": {},
       "image": "glyphicon glyphicon-usd"
     },
 
     { "name" : "jobs",
-      "subcategories": [],
+      "subcategories": {},
       "image": "glyphicon glyphicon-wrench"
+    }
+  ],
+
+  "subcategories": [
+    { "name": "apartments/housing",
+      "category": "categories[0]",
+      "listings": []
+
+    },
+    { "name": "sublets/temporary",
+      "category": "0",
+      "listings": []
+
+    },
+
+    { "name": "vacation rentals",
+      "category": 0,
+      "listings": []
+
     }
   ]
 }
