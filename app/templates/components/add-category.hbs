@@ -1,0 +1,10 @@
+<form class='category-form'>
+  <label for="name">Category name:</label>
+  {{input class='form-control' value=name id="name"}}
+  <label for="image">Image</label>
+  {{input class="form-control" value=image id="image"}}
+
+  <button {{action 'saveCategory'}}>Add Category</button>
+</form>
+
+{{yield}}
