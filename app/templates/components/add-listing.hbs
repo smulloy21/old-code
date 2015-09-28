@@ -1,0 +1,59 @@
+{{#if true}}
+  <form>
+
+    <select onchange={{action (mut selectedCategory) value="target.value"}}>
+      <option value="category" disabled>Choose a category</option>
+      {{#each model.categories as |category|}}
+        <option value={{category.id}} selected={{eq selectedCategory category}}>{{category.name}}</option>
+
+      {{/each}}
+    </select>
+
+  </form>
+{{/if}}
+
+{{#each model.categories as |category|}}
+  {{#if (eq category.id selectedCategory)}}
+  <form>
+    <select onchange={{action (mut selectedSubcategory) value="target.value"}}>
+      <option value="subcategory" disabled>Choose a subcategory</option>
+
+      {{#each category.subcategories as |subcategory|}}
+        <option value={{subcategory.id}} selected={{eq selectedSubcategory subcategory}}>{{subcategory.name}}</option>
+      {{/each}}
+    </select>
+  </form>
+
+  {{/if}}
+{{/each}}
+
+<br><br>
+
+  {{#if selectedSubcategory}}
+  <div class="container">
+    <div class="row">
+      <form>
+        <label for="title">Title</label>
+        {{input value=title id='title'}}
+
+        <label for="name">Name</label>
+        {{input value=name id='name'}}
+
+        <label for="email">Email</label>
+        {{input value=email id='email'}}
+
+        <label for="location">Location</label>
+        {{input value=location id='location'}}
+
+        <label for="details">Details</label>
+        {{textarea value=details id='details'}}
+
+        <label for="image">Image</label>
+        {{input value=image id='image'}}
+
+        <button class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  {{/if}}

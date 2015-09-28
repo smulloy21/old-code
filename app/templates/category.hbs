@@ -1,5 +1,5 @@
 {{#each model.subcategories as |subcategory|}}
-  <h3>{{subcategory.name}}</h3>
+  {{#link-to 'subcategory' subcategory.id}}<h3>{{subcategory.name}}</h3>{{/link-to}}
 {{/each}}
 
 {{add-subcategory category=model saveSubcategory='saveSubcategory'}}
