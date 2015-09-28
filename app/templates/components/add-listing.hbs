@@ -29,31 +29,32 @@
 
 <br><br>
 
-  {{#if selectedSubcategory}}
-  <div class="container">
-    <div class="row">
-      <form>
-        <label for="title">Title</label>
-        {{input value=title id='title'}}
+{{#each model.subcategories as |subcategory|}}
+  {{#if (eq subcategory.id selectedSubcategory)}}
+    <div class="container">
+      <div class="row">
+        <form>
+          <label for="title">Title</label>
+          {{input value=title id='title'}}
 
-        <label for="name">Name</label>
-        {{input value=name id='name'}}
+          <label for="name">Name</label>
+          {{input value=name id='name'}}
 
-        <label for="email">Email</label>
-        {{input value=email id='email'}}
+          <label for="email">Email</label>
+          {{input value=email id='email'}}
 
-        <label for="location">Location</label>
-        {{input value=location id='location'}}
+          <label for="location">Location</label>
+          {{input value=location id='location'}}
 
-        <label for="details">Details</label>
-        {{textarea value=details id='details'}}
+          <label for="details">Details</label>
+          {{textarea value=details id='details'}}
 
-        <label for="image">Image</label>
-        {{input value=image id='image'}}
+          <label for="image">Image</label>
+          {{input value=image id='image'}}
 
-        <button class="btn btn-default">Submit</button>
-      </form>
+          <button class="btn btn-default" {{action 'saveListing' subcategory}} >Submit</button>
+        </form>
+      </div>
     </div>
-  </div>
-
   {{/if}}
+{{/each}}

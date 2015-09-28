@@ -7,5 +7,13 @@ export default Ember.Route.extend({
       subcategories: this.store.findAll('subcategory'),
 
     });
+  },
+  actions: {
+    saveListing(params) {
+      var newListing = this.store.createRecord('listing', params);
+      newListing.save();
+      params.subcategory.save();
+      this.transitionTo('index')
+    }
   }
 });
