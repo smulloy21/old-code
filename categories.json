@@ -1,0 +1,18 @@
+{
+  "categories": [
+    { "name" : "housing",
+      "subcategories": [],
+      "image": "glyphicon glyphicon-home"
+    },
+
+    { "name" : "for sale",
+      "subcategories": [],
+      "image": "glyphicon glyphicon-usd"
+    },
+
+    { "name" : "jobs",
+      "subcategories": [],
+      "image": "glyphicon glyphicon-wrench"
+    }
+  ]
+}

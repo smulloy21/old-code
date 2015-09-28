@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+  <h1>Welcome to Craigslist Clone</h1>
+  <nav>
+    {{#link-to 'index'}}<h2>Home</h2>{{/link-to}}
+    {{#link-to 'newListing'}}<h2>New Listing</h2>{{/link-to}}
+  </nav>
+</header>
 
 {{outlet}}
