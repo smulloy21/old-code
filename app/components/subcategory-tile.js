@@ -3,9 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   mostRecent: ['date:desc'],
   sortedListings: Ember.computed.sort('subcategory.listings', 'mostRecent'),
-  topThree: Ember.observer('subcategory.listings', function() {
-    if (this.get('sortedListings').length > 2) {
-      'sortedListings'.slice(0, 2);
-    }
+  recentListings: Ember.computed('subcategory.listings.[]', function() {
+    var recent = [];
+    recent.push(this.get('sortedListings').objectAt(0));
+    recent.push(this.get('sortedListings').objectAt(1));
+    recent.push(this.get('sortedListings').objectAt(2));
+    return recent;
   }),
 });
