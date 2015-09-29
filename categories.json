@@ -14,24 +14,5 @@
       "subcategories": {},
       "image": "glyphicon glyphicon-wrench"
     }
-  ],
-
-  "subcategories": [
-    { "name": "apartments/housing",
-      "category": "categories[0]",
-      "listings": []
-
-    },
-    { "name": "sublets/temporary",
-      "category": "0",
-      "listings": []
-
-    },
-
-    { "name": "vacation rentals",
-      "category": 0,
-      "listings": []
-
-    }
   ]
 }

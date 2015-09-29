@@ -1,7 +1,9 @@
-{{#link-to 'category' category.id}}
-<div class="category-img col-xs-4" style="float: left;">
-    <span class={{category.image}} ></span>
-    <p class="category-title">{{category.name}}</p>
-</div>
+{{#each sortedCategories as |category|}}
+  {{#link-to 'category' category.id}}
+  <div class="category-img col-xs-4" style="float: left;">
+      <span class={{category.image}} ></span>
+      <p class="category-title">{{category.name}}</p>
+  </div>
 
-{{/link-to}}
+  {{/link-to}}
+{{/each}}

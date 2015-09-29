@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'craigslist-clone',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://craigslist-clone-epicodus.firebaseio.com/',
+    firebase: 'https://ember-craigslist.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
