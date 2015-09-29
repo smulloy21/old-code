@@ -1,16 +1,10 @@
-
-
-<h2>{{listing.title}}</h2>
-<h3>{{listing.name}}</h3>
-<h3>{{listing.email}}</h3>
-<h3>{{moment-from-now listing.date}}</h3>
-<img src={{listing.image}} alt="Listing Image">
-
-<br><br>
-<p>
-  {{listing.details}}
-</p>
-
-
-
-{{yield}}
+<div class="row text-right">
+  <h3 class="time"><small class="time">{{moment-from-now listing.date}}</small></h3>
+</div>
+<img src={{listing.image}} alt="Listing Image" class='col-xs-6'>
+<div class="col-xs-6">
+  <h2>{{listing.title}}</h2>
+  <h4>{{listing.name}} - {{listing.email}}</h4>
+  <br>
+  <p>{{listing.details}}</p>
+</div>

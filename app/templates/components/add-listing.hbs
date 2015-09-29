@@ -1,28 +1,39 @@
 {{#if true}}
   <form>
-    <label for="category">Choose a listing category:</label>
-    <select onchange={{action (mut selectedCategory) value="target.value"}}>
-      <option value="category" disabled>Choose a category</option>
-      {{#each model.categories as |category|}}
-        <option value={{category.id}} selected={{eq selectedCategory category}}>{{category.name}}</option>
+    <div class="row">
+      <div class="col-xs-6">
+        <label for="category">Choose a listing category:</label>
+      </div>
+      <div class="col-xs-6">
+        <select class="form-control" onchange={{action (mut selectedCategory) value="target.value"}}>
+          <option class="form-control" value="category" disabled>Choose a category</option>
+          {{#each model.categories as |category|}}
+            <option class="form-control" value={{category.id}} selected={{eq selectedCategory category}}>{{category.name}}</option>
 
-      {{/each}}
-    </select>
-
+          {{/each}}
+        </select>
+      </div>
+    </div>
   </form>
 {{/if}}
 
 {{#each model.categories as |category|}}
   {{#if (eq category.id selectedCategory)}}
   <form>
-    <label for="subcategory">Choose a listing subcategory:</label>
-    <select onchange={{action (mut selectedSubcategory) value="target.value"}}>
-      <option value="subcategory" disabled>Choose a subcategory</option>
+    <div class="row">
+      <div class="col-xs-6">
+        <label for="subcategory">Choose a listing subcategory:</label>
+      </div>
+      <div class="col-xs-6">
+        <select class="form-control" onchange={{action (mut selectedSubcategory) value="target.value"}}>
+          <option class="form-control" value="subcategory" disabled>Choose a subcategory</option>
 
-      {{#each category.subcategories as |subcategory|}}
-        <option value={{subcategory.id}} selected={{eq selectedSubcategory subcategory}}>{{subcategory.name}}</option>
-      {{/each}}
-    </select>
+          {{#each category.subcategories as |subcategory|}}
+            <option class="form-control" value={{subcategory.id}} selected={{eq selectedSubcategory subcategory}}>{{subcategory.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
   </form>
 
   {{/if}}
@@ -39,7 +50,7 @@
           {{input class="form-control" value=title id='title'}}
 
           <label for="name">Name</label>
-          {{input class="form-control"value=name id='name'}}
+          {{input class="form-control" value=name id='name'}}
 
           <label for="email">Email</label>
           {{input class="form-control" value=email id='email'}}

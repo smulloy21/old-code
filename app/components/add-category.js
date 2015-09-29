@@ -7,7 +7,7 @@ export default Ember.Component.extend({
         name: this.get('name'),
         subcategories: [],
         image: this.get('image')
-      }
+      };
       this.sendAction('saveCategory', params);
     }
   }

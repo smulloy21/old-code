@@ -1,7 +1,9 @@
-<div class="subcategory-tile">
-  {{#link-to 'subcategory' subcategory.id}}{{subcategory.name}}{{/link-to}}
-  <hr>
-  {{#each sortedListings as |listing|}}
-  {{#link-to 'listing' listing.id}}<li>{{listing.title}}</li>{{/link-to}}
-  {{/each}}
+<div class="col-xs-4 subcategory-outer-tile" style="float: left;">
+  <div class="subcategory-content-tile">
+    {{#link-to 'subcategory' subcategory.id}}{{subcategory.name}}{{/link-to}}
+    <hr>
+    {{#each sortedListings as |listing|}}
+    {{#link-to 'listing' listing.id}}<li>{{listing.title}}</li>{{/link-to}}
+    {{/each}}
+  </div>
 </div>

@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       var newListing = this.store.createRecord('listing', params);
       newListing.save();
       params.subcategory.save();
-      this.transitionTo('index')
+      this.transitionTo('index');
     }
   }
 });

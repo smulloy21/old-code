@@ -1,3 +1,7 @@
-{{nav-links category = model.category}}
-
+{{nav-links subcategory=model category=model.category}}
+<h1>{{model.name}}</h1><br>
+{{#if (eq model.listings.length 0)}}
+  <h4>There are currently no listings. {{#link-to 'newListing'}}<big>Add one!</big>{{/link-to}}</h4>
+{{else}}
 {{listing-tiles listings=model.listings}}
+{{/if}}

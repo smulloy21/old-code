@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         details: this.get('details'),
         image: this.get('image'),
         subcategory: subcategory,
-      }
+      };
       this.sendAction('saveListing', params);
     }
   }

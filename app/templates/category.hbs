@@ -1,14 +1,10 @@
 {{nav-links category=model}}
 
-<!-- {{#each model.subcategories as |subcategory|}}
-  {{#link-to 'subcategory' subcategory.id}}<h3>{{subcategory.name}}</h3>{{/link-to}}
-{{/each}} -->
-
 {{#each model.subcategories as |subcategory|}}
-{{subcategory-tile subcategory=subcategory}}
+  {{subcategory-tile subcategory=subcategory}}
 {{/each}}
 
 <br>
 <br>
 
-{{add-subcategory category=model saveSubcategory='saveSubcategory'}}
+<!-- {{add-subcategory category=model saveSubcategory='saveSubcategory'}} -->
